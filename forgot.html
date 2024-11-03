@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-indigo-600 text-white text-center rounded-lg p-6 w-80 shadow-lg">
+    <h2 class="text-lg font-semibold mb-4">Password Reset</h2>
+    <p class="text-sm mb-4">
+      Enter your email address and we'll send you an email with instructions to reset your password.
+    </p>
+
+    <form id="forgotPasswordForm">
+      <div class="mb-4">
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" class="w-full p-2 rounded bg-gray-50 text-gray-800 focus:outline-none" placeholder="Enter your email" required>
+      </div>
+
+      <button type="submit" id="resetBtn" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded">
+        Reset Password
+      </button>
+    </form>
+
+    <div class="mt-4 flex justify-between text-sm">
+      <a href="login.html" class="text-blue-200 hover:underline">Login</a>
+      <a href="index.html" class="text-blue-200 hover:underline">Register</a>
+    </div>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="log.js"></script>
+  <script type="module" src="sign.js"></script>
+  
+</body>
+</html>
+
