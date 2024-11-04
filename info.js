@@ -61,7 +61,7 @@ onAuthStateChanged(auth, (user) => {
                   });
                });
                  
-              //  location.href = 'http://localhost:5000/';
+               location.href = './info.html';
       //update profile
      document.getElementById("update").addEventListener('click', () => {
       updateProfile(auth.currentUser, {
