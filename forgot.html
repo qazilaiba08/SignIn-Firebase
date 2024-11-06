@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forgot Password</title>
-
+ <!-- SweetAlert2 from CDN -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -23,20 +24,22 @@
         <input type="email" id="email" class="w-full p-2 rounded bg-gray-50 text-gray-800 focus:outline-none" placeholder="Enter your email" required>
       </div>
 
-      <button type="submit" id="resetBtn" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded">
+      <button type="button" id="resetBtn" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded">
         Reset Password
       </button>
     </form>
 
     <div class="mt-4 flex justify-between text-sm">
-      <a href="login.html" class="text-blue-200 hover:underline">Login</a>
-      <a href="index.html" class="text-blue-200 hover:underline">Register</a>
+     
+      <a href="./login.html" class="text-blue-200 hover:underline">Login</a>
+      <a href="./index.html" class="text-blue-200 hover:underline">Register</a>
     </div>
   </div>
 
-  <script type="module" src="firebase.js"></script>
-  <script type="module" src="log.js"></script>
-  <script type="module" src="sign.js"></script>
+  <script type="module" src="./firebase.js"></script>
+  <script type="module" src="./forgot.js"></script>
+  <script type="module" src="./log.js"></script>
+  <script type="module" src="./sign.js"></script>
   
 </body>
 </html>

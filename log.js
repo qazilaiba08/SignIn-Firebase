@@ -2,16 +2,13 @@ import { getAuth, signInWithEmailAndPassword } from './firebase.js';
 
 const auth = getAuth();
 
-
-
-let signInBtn = document.getElementById('btn');
+let btn =  document.getElementById("btn")
+  
+if(btn){
+   btn.addEventListener('click', () => {
+ 
 let signInEmail = document.getElementById('email');
 let signInPass = document.getElementById("password");
-
-
-    
-    signInBtn.addEventListener("click", (e) => {
-        e.preventDefault();
       
         if(signInEmail.value && signInPass.value){
 //validation
@@ -22,8 +19,7 @@ let signInPass = document.getElementById("password");
         console.log("Invalid email format");
     } else if (!passwordPattern.test(signInPass.value)) {
         console.log("Password does not meet complexity requirements");
-    }
-
+    } 
     //Firebase Authentication
         signInWithEmailAndPassword(auth,  signInEmail.value, signInPass.value)
           .then((userCredential) => {
@@ -47,8 +43,7 @@ let signInPass = document.getElementById("password");
         }
          location.href = "./info.html"
      })
-
-
+   
        .catch((error) => {
            const errorCode = error.code;
            const errorMessage = error.message;
@@ -58,6 +53,7 @@ let signInPass = document.getElementById("password");
                text: errorMessage,
        });
     })
+
    }
   });
-       
+} 

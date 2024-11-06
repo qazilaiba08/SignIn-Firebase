@@ -3,8 +3,9 @@
 
   import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword,
     onAuthStateChanged, sendEmailVerification,
-    updateProfile,updateEmail,
-    sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    updateProfile,updateEmail,signOut ,
+    sendPasswordResetEmail,GoogleAuthProvider,signInWithPopup,
+    getRedirectResult} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
  
   const firebaseConfig = {
@@ -17,12 +18,14 @@
   };
 
 
-
   const app = initializeApp(firebaseConfig); 
 
+  
+const provider = new GoogleAuthProvider();
  const auth = getAuth()
-  console.log(app,auth);
+  console.log(app,auth,provider);
 
 
   export {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,
-    sendEmailVerification, updateProfile,updateEmail ,sendPasswordResetEmail}
+    sendEmailVerification, updateProfile,updateEmail ,sendPasswordResetEmail,signOut ,GoogleAuthProvider,
+    signInWithPopup,getRedirectResult}

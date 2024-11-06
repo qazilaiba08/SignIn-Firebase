@@ -1,29 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>profile page</title>
-      <!-- SweetAlert2 from CDN -->
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- <!-- Bootstrap CSS -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa1hVbXTsa2bmxMSzF+DyBAb7mXK//Z06bQ//zJJzSqzX3vL+kv3M8eS4p3" crossorigin="anonymous">
-
+  <title> Dashboard</title>
+    <!-- SweetAlert2 from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
  <!-- Font Awesome Icons (Heroicons alternative) -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
 </head>
-<body  class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
-   <div id="profile"  class="container mx-auto p-6"> 
-</div>
- 
+  <!-- Sidebar -->
+  <div class="flex flex-no-wrap " id="profile">
+    <div class="w-64 bg-gray-800 h-screen shadow-lg hidden lg:block">
+      <div class="p-6">
+        <h1 class="text-white text-2xl font-bold">Dashboard</h1>
+      </div>
+      <nav class="mt-8 grid-cols-1">
+       <button type="button"><a href="" class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg hover:bg-gray-700">Home</a></button>
+       <button type="button" id="update"> <a href=""  class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg hover:bg-gray-700">Profile</a></button>
+       <button type="button" id="verifyEmail"><a href="" id="verifyEmail" class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg hover:bg-gray-700">Settings</a></button>
+        <button type="button" id="updateEmail"><a href="" class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg hover:bg-gray-700">Verify Email</a></button>
+        <button type="button" id="signOut"><a href="login.html" id='signOut' class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg hover:bg-gray-700">Logout</a></button>
+      </nav>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpdzzEzrwKWrKaxOQ5D+z5oU2yM3z4wfj5aGauA+eF5U5y4Lt" crossorigin="anonymous"></script>
+    <!-- Main Content -->
+    <div class="flex flex-col w-full lg:ml-84">
+
+      <!-- Top Bar -->
+      <header class="w-full bg-white shadow p-4 flex items-center justify-between">
+        <div>
+          <h2 class="text-xl font-semibold text-gray-800">Dashboard</h2>
+        </div>
+       <button type="button"  id="update"><div class="flex items-center ">
+          <span class="text-gray-700 font-semibold mr-4" id="user">Hello, User</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumfgYMPZxiN1O43V6ozfAA4AnMksYzmUbHg&s" alt="User Avatar" class="w-10 h-10 rounded-full">
+        </div></button> 
+      </header>
+
+      <!-- Dashboard Content -->
+      <main class="flex-2 overflow-auto p-6">
+        <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-9">
+          
+        
+          <!-- Card 1 -->
+          <div class="bg-white shadow-lg rounded-lg p-5">
+            <h3 class="text-lg font-semibold text-gray-800">Landing Pages</h3>
+            <p class="text-gray-600 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia deleniti sunt excepturi eius pariatur et eveniet nulla quidem sit optio
+               illum, impedit totam odio beatae dicta. Delectus voluptatem porro molestiae!</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white shadow-lg rounded-lg p-5">
+            <h3 class="text-lg font-semibold text-gray-800">Content Design</h3>
+            <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis, adipisci obcaecati modi nesciunt officiis ipsam qui architecto iste,
+               sequi quos ratione cumque sapiente molestiae nihil! Iste quasi molestias libero.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white shadow-lg rounded-lg p-5">
+            <h3 class="text-lg font-semibold text-gray-800">Web Developer</h3>
+            <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas ratione enim mollitia, quia reprehenderit nostrum in consequuntur repellat 
+              qui architecto veritatis debitis itaque inventore laudantium cumque! Quibusdam placeat nisi dolore!</p>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+      </main>
+      <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-9">
+          
+        
+        <!-- Card 1 -->
+        <div class="bg-white shadow-lg rounded-lg p-5">
+          <h3 class="text-lg font-semibold text-gray-800">Landing Pages</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia deleniti sunt excepturi eius pariatur et eveniet nulla quidem sit optio
+             illum, impedit totam odio beatae dicta. Delectus voluptatem porro molestiae!</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-lg rounded-lg p-5">
+          <h3 class="text-lg font-semibold text-gray-800">Content Design</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis, adipisci obcaecati modi nesciunt officiis ipsam qui architecto iste,
+             sequi quos ratione cumque sapiente molestiae nihil! Iste quasi molestias libero.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-lg rounded-lg p-5">
+          <h3 class="text-lg font-semibold text-gray-800">Web Developer</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas ratione enim mollitia, quia reprehenderit nostrum in consequuntur repellat 
+            qui architecto veritatis debitis itaque inventore laudantium cumque! Quibusdam placeat nisi dolore!</p>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="firebase.js"></script>
   <script type="module" src="sign.js"></script>
   <script type="module" src="log.js"></script>
   <script type="module" src="info.js"></script>
+
 </body>
 </html>
+
