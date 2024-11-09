@@ -5,9 +5,11 @@
     onAuthStateChanged, sendEmailVerification,
     updateProfile,updateEmail,signOut ,
     sendPasswordResetEmail,GoogleAuthProvider,signInWithPopup,
-    getRedirectResult} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    updatePassword 
+      } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
- 
+   import {getFirestore,collection , addDoc  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
   const firebaseConfig = {
     apiKey: "AIzaSyDG-n3P2PSFuSK9xAhMM-JUtNjlj1WYmFs",
     authDomain: "fir-auth-ebf5e.firebaseapp.com",
@@ -20,12 +22,14 @@
 
   const app = initializeApp(firebaseConfig); 
 
-  
-const provider = new GoogleAuthProvider();
  const auth = getAuth()
-  console.log(app,auth,provider);
+ 
+ const provider = new GoogleAuthProvider();
+
+ const db = getFirestore(app);
+  console.log(app,auth);
 
 
-  export {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,
-    sendEmailVerification, updateProfile,updateEmail ,sendPasswordResetEmail,signOut ,GoogleAuthProvider,
-    signInWithPopup,getRedirectResult}
+  export {collection  ,db, addDoc , getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,
+    sendEmailVerification,updateProfile,updateEmail ,sendPasswordResetEmail,signOut ,GoogleAuthProvider,
+    signInWithPopup,provider,updatePassword }
